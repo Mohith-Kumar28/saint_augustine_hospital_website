@@ -29,7 +29,7 @@ const categories = [
 const doctorsData = [
   {
     avatar: imgAPI.medical[7],
-    name: "DDR. RAJIV  SAIKIA",
+    name: "DR. RAJIV  SAIKIA",
     title: "M.B.B.S, MD (Physician)",
     about: "",
     rating: "OPD No. 03",

@@ -16,10 +16,7 @@ function Profile(props) {
           <img src={avatar} alt={name} />
         </Avatar>
         <div className={classes.nameCard}>
-          <h4>
-            dr.
-            {name}
-          </h4>
+          <h4>{name}</h4>
           <Typography>{title}</Typography>
         </div>
       </div>
