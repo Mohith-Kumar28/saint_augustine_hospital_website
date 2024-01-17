@@ -122,7 +122,7 @@ function Landing(props) {
         <section className={classes.spaceTopShort}>
           <Footer toggleDir={onToggleDir} />
         </section>
-        {!isMobile && <Notification />}
+        {/* {!isMobile && <Notification />} */}
       </div>
     </React.Fragment>
   );

@@ -5,6 +5,7 @@ import Avatar from "@mui/material/Avatar";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import useStyles from "./cards-style";
+import Link from "next/link";
 
 function Profile(props) {
   const { classes } = useStyles();
@@ -35,13 +36,15 @@ function Profile(props) {
           &nbsp;Years
         </span>
         {/* </div> */}
-        <Button
-          variant="contained"
-          color="secondary"
-          className={classes.button}
-        >
-          chat
-        </Button>
+        <Link href={"tel:+916901787830"}>
+          <Button
+            variant="contained"
+            color="secondary"
+            className={classes.button}
+          >
+            Call
+          </Button>
+        </Link>
       </div>
     </Paper>
   );

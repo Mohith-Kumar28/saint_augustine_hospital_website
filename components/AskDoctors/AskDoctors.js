@@ -28,7 +28,7 @@ const categories = [
 
 const doctorsData = [
   {
-    avatar: imgAPI.medical[7],
+    avatar: imgAPI.doctors[1],
     name: "DR. RAJIV  SAIKIA",
     title: "M.B.B.S, MD (Physician)",
     about: "",
@@ -36,21 +36,21 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[12],
+    avatar: imgAPI.doctors[2],
     name: "DR. RAKTIM KR BORA",
     title: "M.B.B.S, DCH (Consultant Pediatrician)",
     rating: "OPD No. 02",
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[8],
+    avatar: imgAPI.doctors[3],
     name: "DR. JAHIDUR RAHMAN",
     title: "M.B.B.S, Critical Care (Anesthetist)",
     rating: "OPD No. 01",
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[10],
+    avatar: imgAPI.doctors[4],
     name: "DR. SHAH JAHAN ALI",
     title: "M.B.B.S, M.D (Gynecologist)",
     about: "",
@@ -58,7 +58,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[11],
+    avatar: imgAPI.doctors[5],
     name: "SUSANTA SINGHA",
     title: "M.B.B.S, N.B (Surgeon)",
     about: "",
@@ -66,7 +66,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[9],
+    avatar: imgAPI.doctors[6],
     name: "DR. FIROZ IFTEKHAR AHMED",
     title: "M.B.B.S CMO, (EMERGENCY)",
     about: "",
@@ -74,7 +74,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[9],
+    avatar: imgAPI.doctors[7],
     name: "DR. SODAGAR SINGHA",
     title: "M.B.B.S, M.S. (Orthopedics)",
     about: "",
@@ -82,7 +82,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[9],
+    avatar: imgAPI.doctors[8],
     name: "DR. RAJU BASUMATARY",
     title: "M.B.B.S, D.C.P",
     about: "",
@@ -90,7 +90,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[9],
+    avatar: imgAPI.doctors[9],
     name: "DR. SUVRADWIP BISWAS",
     title: "M.B.B.S, M.S. (ENT, Head & Neck Surgery)",
     about: "",
@@ -98,7 +98,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[9],
+    avatar: imgAPI.doctors[10],
     name: "DR. ANJAN DAS",
     title: "M.B.B.S (EMERGENCY)",
     about: "",
@@ -106,7 +106,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[9],
+    avatar: imgAPI.doctors[11],
     name: "UROLOGIST",
     title: "Visiting Doctor",
     about: "",
@@ -114,7 +114,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.medical[9],
+    avatar: imgAPI.doctors[12],
     name: "CARDIOLOGIST",
     title: "Visiting Doctor",
     about: "",
