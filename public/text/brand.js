@@ -1,7 +1,7 @@
 module.exports = {
   medical: {
     name: "Saint Augustine Hospital",
-    desc: "Luxiren medical - React Single Landing Page Template",
+    desc: "Saint Augustine Hospital",
     prefix: "Saint Augustine ",
     footerText: "Saint Augustine Hospital - All Rights Reserved 2024",
     logoText: "Saint Augustine Hospital",
