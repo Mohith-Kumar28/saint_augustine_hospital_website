@@ -1,11 +1,11 @@
 module.exports = {
   medical: {
-    name: "Saint Augustine Hospital",
-    desc: "Saint Augustine Hospital",
-    prefix: "Saint Augustine ",
-    footerText: "Saint Augustine Hospital - All Rights Reserved 2024",
-    logoText: "Saint Augustine Hospital",
-    projectName: "Saint Augustine Hospital",
+    name: "ST. Augustine Hospital",
+    desc: "ST. Augustine Hospital",
+    prefix: "ST. Augustine ",
+    footerText: "ST. Augustine Hospital - All Rights Reserved 2024",
+    logoText: "ST. Augustine Hospital",
+    projectName: "ST. Augustine Hospital",
     url: "luxireact.ux-maestro.com/medical",
     img: "/static/images/medical-logo.png",
     notifMsg:

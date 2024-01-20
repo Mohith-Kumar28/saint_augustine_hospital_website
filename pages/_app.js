@@ -1,51 +1,52 @@
-import React, { useState, useEffect } from 'react';
-import Head from 'next/head';
-import App from 'next/app';
-import PropTypes from 'prop-types';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
-import { CacheProvider } from '@emotion/react';
-import createCache from '@emotion/cache';
-import rtlPlugin from 'stylis-plugin-rtl';
-import { prefixer } from 'stylis';
-import CssBaseline from '@mui/material/CssBaseline';
-import LoadingBar from 'react-top-loading-bar';
-import { appWithTranslation } from 'next-i18next';
-import lngDetector from '../lib/languageDetector';
-import appTheme from '../theme/appTheme';
+import React, { useState, useEffect } from "react";
+import Head from "next/head";
+import App from "next/app";
+import PropTypes from "prop-types";
+import { ThemeProvider, createTheme } from "@mui/material/styles";
+import { CacheProvider } from "@emotion/react";
+import createCache from "@emotion/cache";
+import rtlPlugin from "stylis-plugin-rtl";
+import { prefixer } from "stylis";
+import CssBaseline from "@mui/material/CssBaseline";
+import LoadingBar from "react-top-loading-bar";
+import { appWithTranslation } from "next-i18next";
+import lngDetector from "../lib/languageDetector";
+import appTheme from "../theme/appTheme";
 /* import css vendors */
-import 'dandelion-animated-slider/build/horizontal.css';
-import 'animate.css/animate.css';
-import '~/vendors/hamburger-menu.css';
-import '~/vendors/animate-slider.css';
-import '../vendors/animate-extends.css';
-import '../vendors/top-loading-bar.css';
-import '../vendors/slick/slick.css';
-import '../vendors/slick/slick-theme.css';
+import "dandelion-animated-slider/build/horizontal.css";
+import "animate.css/animate.css";
+import "~/vendors/hamburger-menu.css";
+import "~/vendors/animate-slider.css";
+import "../vendors/animate-extends.css";
+import "../vendors/top-loading-bar.css";
+import "../vendors/slick/slick.css";
+import "../vendors/slick/slick-theme.css";
 
-let themeType = '';
-if (typeof Storage !== 'undefined') { // eslint-disable-line
-  themeType = localStorage.getItem('luxiTheme');
+let themeType = "";
+if (typeof Storage !== "undefined") {
+  // eslint-disable-line
+  themeType = localStorage.getItem("luxiTheme");
 }
 
-const isBrowser = typeof document !== 'undefined';
+const isBrowser = typeof document !== "undefined";
 let insertionPoint;
 
 if (isBrowser) {
   const emotionInsertionPoint = document.querySelector(
-    'meta[name="emotion-insertion-point"]',
+    'meta[name="emotion-insertion-point"]'
   );
   insertionPoint = emotionInsertionPoint ?? undefined;
 }
 
 const cacheRTL = createCache({
-  key: 'mui-style-rtl',
+  key: "mui-style-rtl",
   stylisPlugins: [prefixer, rtlPlugin],
   insertionPoint,
   prepend: true,
 });
 
 const cacheLTR = createCache({
-  key: 'mui-style-ltr',
+  key: "mui-style-ltr",
   insertionPoint,
   prepend: true,
 });
@@ -56,24 +57,24 @@ function MyApp(props) {
 
   const curLang = lngDetector.detect();
 
-  const themeName = 'fresh';
-  const defaultTheme = 'light';
+  const themeName = "fresh";
+  const defaultTheme = "light";
   const [theme, setTheme] = useState({
     ...appTheme(themeName, defaultTheme),
-    direction: 'ltr',
+    direction: "ltr",
   });
 
   useEffect(() => {
     // Set layout direction
-    const themeDir = curLang === 'ar' ? 'rtl' : 'ltr';
+    const themeDir = curLang === "ar" ? "rtl" : "ltr";
     document.dir = themeDir;
-    document.documentElement.setAttribute('lang', curLang);
+    document.documentElement.setAttribute("lang", curLang);
 
     // Set color mode and direction
-    if (themeType === 'dark' || curLang === 'ar') {
+    if (themeType === "dark" || curLang === "ar") {
       setTheme({
         ...appTheme(themeName, themeType || defaultTheme),
-        direction: themeDir
+        direction: themeDir,
       });
     }
 
@@ -82,7 +83,7 @@ function MyApp(props) {
     // router.push({ pathname, query }, asPath, { locale: curLang });
 
     // Remove preloader
-    const preloader = document.getElementById('preloader');
+    const preloader = document.getElementById("preloader");
     if (preloader !== null || undefined) {
       setTimeout(() => {
         preloader.remove();
@@ -97,8 +98,11 @@ function MyApp(props) {
   }, []);
 
   const toggleDarkTheme = () => {
-    const newPaletteType = theme.palette.mode === 'light' ? 'dark' : 'light';
-    localStorage.setItem('luxiTheme', theme.palette.mode === 'light' ? 'dark' : 'light');
+    const newPaletteType = theme.palette.mode === "light" ? "dark" : "light";
+    localStorage.setItem(
+      "luxiTheme",
+      theme.palette.mode === "light" ? "dark" : "light"
+    );
 
     setTheme({
       ...appTheme(themeName, newPaletteType),
@@ -106,21 +110,21 @@ function MyApp(props) {
     });
   };
 
-  const toggleDirection = dir => {
+  const toggleDirection = (dir) => {
     document.dir = dir;
     // set theme
     setTheme({
       ...theme,
       direction: dir,
       palette: {
-        ...theme.palette
-      }
+        ...theme.palette,
+      },
     });
   };
 
   const muiTheme = createTheme(theme);
   return (
-    <CacheProvider value={theme.direction === 'rtl' ? cacheRTL : cacheLTR}>
+    <CacheProvider value={theme.direction === "rtl" ? cacheRTL : cacheLTR}>
       <Head>
         <meta
           name="viewport"
@@ -151,9 +155,11 @@ function MyApp(props) {
 MyApp.propTypes = {
   Component: PropTypes.elementType.isRequired,
   pageProps: PropTypes.object.isRequired,
-  router: PropTypes.object.isRequired
+  router: PropTypes.object.isRequired,
 };
 
-MyApp.getInitialProps = async (appContext) => ({ ...(await App.getInitialProps(appContext)) });
+MyApp.getInitialProps = async (appContext) => ({
+  ...(await App.getInitialProps(appContext)),
+});
 
 export default appWithTranslation(MyApp);

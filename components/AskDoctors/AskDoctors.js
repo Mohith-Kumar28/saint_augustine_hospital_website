@@ -14,23 +14,12 @@ import ProfileCard from "../Cards/Profile";
 import useTitle from "../Title/title-style";
 import useStyles from "./ask-doctors-style";
 
-const categories = [
-  "Physician",
-  "Consultant Pediatrician",
-  "Anesthetist",
-  "Gynecologist",
-  "Surgeon",
-  "Orthopedics",
-  "ENT, Head & Neck Surgery",
-  "UROLOGIST",
-  "CARDIOLOGIST",
-];
-
 const doctorsData = [
   {
     avatar: imgAPI.doctors[1],
     name: "DR. RAJIV  SAIKIA",
     title: "M.B.B.S, MD (Physician)",
+    role: "Physician",
     about: "",
     rating: "OPD No. 03",
     exp: 4,
@@ -39,6 +28,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[2],
     name: "DR. RAKTIM KR BORA",
     title: "M.B.B.S, DCH (Consultant Pediatrician)",
+    role: "Consultant Pediatrician",
     rating: "OPD No. 02",
     exp: 4,
   },
@@ -46,6 +36,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[3],
     name: "DR. JAHIDUR RAHMAN",
     title: "M.B.B.S, Critical Care (Anesthetist)",
+    role: "Anesthetist",
     rating: "OPD No. 01",
     exp: 4,
   },
@@ -53,6 +44,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[4],
     name: "DR. SHAH JAHAN ALI",
     title: "M.B.B.S, M.D (Gynecologist)",
+    role: "Gynecologist",
     about: "",
     rating: "OPD No. 05",
     exp: 4,
@@ -61,6 +53,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[5],
     name: "SUSANTA SINGHA",
     title: "M.B.B.S, N.B (Surgeon)",
+    role: "Surgeon",
     about: "",
     rating: "OPD No. 04",
     exp: 4,
@@ -69,6 +62,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[6],
     name: "DR. FIROZ IFTEKHAR AHMED",
     title: "M.B.B.S CMO, (EMERGENCY)",
+    role: "EMERGENCY",
     about: "",
     rating: "",
     exp: 4,
@@ -77,6 +71,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[7],
     name: "DR. SODAGAR SINGHA",
     title: "M.B.B.S, M.S. (Orthopedics)",
+    role: "Orthopedics",
     about: "",
     rating: "OPD No. 06",
     exp: 4,
@@ -84,7 +79,8 @@ const doctorsData = [
   {
     avatar: imgAPI.doctors[8],
     name: "DR. RAJU BASUMATARY",
-    title: "M.B.B.S, D.C.P",
+    title: "M.B.B.S, (D.C.P)",
+    role: "D.C.P",
     about: "",
     rating: "",
     exp: 4,
@@ -93,6 +89,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[9],
     name: "DR. SUVRADWIP BISWAS",
     title: "M.B.B.S, M.S. (ENT, Head & Neck Surgery)",
+    role: "ENT, Head & Neck Surgery",
     about: "",
     rating: "OPD No. 07",
     exp: 4,
@@ -101,6 +98,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[10],
     name: "DR. ANJAN DAS",
     title: "M.B.B.S (EMERGENCY)",
+    role: "EMERGENCY",
     about: "",
     rating: "",
     exp: 4,
@@ -109,6 +107,7 @@ const doctorsData = [
     avatar: imgAPI.doctors[11],
     name: "UROLOGIST",
     title: "Visiting Doctor",
+    role: "Visiting Doctor",
     about: "",
     rating: "",
     exp: 4,
@@ -117,10 +116,17 @@ const doctorsData = [
     avatar: imgAPI.doctors[12],
     name: "CARDIOLOGIST",
     title: "Visiting Doctor",
+    role: "Visiting Doctor",
     about: "",
     rating: "",
     exp: 4,
   },
+];
+
+// Extract unique roles from doctorsData
+const uniqueRoles = [
+  "All",
+  ...Array.from(new Set(doctorsData.map((doctor) => doctor.role))),
 ];
 
 function AskDoctors() {
@@ -133,10 +139,21 @@ function AskDoctors() {
 
   const { classes, cx } = useStyles();
   const { classes: title } = useTitle();
-  const [selectedIndex, setSelectedIndex] = useState("all");
+  const [selectedIndex, setSelectedIndex] = useState("All");
 
-  function handleListItemClick(event, index) {
-    setSelectedIndex(index);
+  // State to store the filtered doctors based on the selected role
+  const [filteredDoctors, setFilteredDoctors] = useState(doctorsData);
+  function handleListItemClick(event, role) {
+    // If "All" is selected, show all doctors
+    if (role === "All") {
+      setFilteredDoctors(doctorsData);
+    } else {
+      // Filter the doctors based on the selected role
+      const filtered = doctorsData.filter((doctor) => doctor.role === role);
+      setFilteredDoctors(filtered);
+    }
+
+    setSelectedIndex(role);
   }
 
   const renderCard = (item, index) => (
@@ -153,6 +170,7 @@ function AskDoctors() {
   return (
     <div className={classes.root}>
       <div className={classes.deco} />
+
       <Container fixed={isDesktop}>
         <Grid container spacing={isDesktop ? 3 : 0} justifyContent="center">
           <Grid item md={2} sm={9} xs={12}>
@@ -168,17 +186,29 @@ function AskDoctors() {
                   {t("medical-landing.ask_doctors")}
                 </Typography>
                 <List component="nav">
-                  {categories.map((item, index) => (
+                  {/* <ListItem
+                    className={cx(
+                      classes.filter
+
+                      // selectedIndex === item.role && classes.active
+                    )}
+                    onClick={(event) => {
+                      setSelectedIndex("all"), setFilteredDoctors(doctorsData);
+                    }}
+                  >
+                    <ListItemText primary={"All "} />
+                  </ListItem> */}
+                  {uniqueRoles.map((role, index) => (
                     <ListItem
                       button
                       key={index.toString()}
                       className={cx(
                         classes.filter,
-                        selectedIndex === item && classes.active
+                        selectedIndex === role && classes.active
                       )}
-                      onClick={(event) => handleListItemClick(event, item)}
+                      onClick={(event) => handleListItemClick(event, role)}
                     >
-                      <ListItemText primary={item} />
+                      <ListItemText primary={role} />
                     </ListItem>
                   ))}
                 </List>
@@ -188,7 +218,7 @@ function AskDoctors() {
           <Grid item lg={8} md={10} xs={12}>
             <div className={classes.massonry}>
               <Grid container spacing={isDesktop ? 6 : 4}>
-                {doctorsData.map((item, index) => (
+                {filteredDoctors.map((item, index) => (
                   <Grid item sm={6} xs={12} key={index.toString()}>
                     <ScrollAnimation
                       animateOnce
