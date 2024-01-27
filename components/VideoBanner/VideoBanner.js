@@ -124,7 +124,7 @@ function VideoBanner() {
               >
                 {t("medical-landing.banner_subtitle")}
               </Typography>
-              {/* <Paper className={classes.searchBanner}>
+              <Paper className={classes.searchBanner}>
                 <TextField
                   variant="standard"
                   className={classes.search}
@@ -142,7 +142,7 @@ function VideoBanner() {
                     {isDesktop && t("medical-landing.banner_search")}
                   </Button>
                 </div>
-              </Paper> */}
+              </Paper>
             </div>
           </Grid>
           {isTablet && (
