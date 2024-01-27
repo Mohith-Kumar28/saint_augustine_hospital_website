@@ -125,12 +125,35 @@ function MapAdress() {
           </Grid>
           <Grid item md={6} xs={12}>
             <Paper className={classes.map} elevation={10}>
-              <MapWithAMarker
+              {/* <MapWithAMarker
                 googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
                 loadingElement={<div style={{ height: "100%" }} />}
                 containerElement={<div style={{ height: "700px" }} />}
                 mapElement={<div style={{ height: "100%" }} />}
-              />
+              /> */}
+              {/* <iframe
+                width="100%"
+                height="100%"
+                class="absolute inset-0"
+                frameborder="0"
+                title="map"
+                marginheight="0"
+                marginwidth="0"
+                scrolling="no"
+                src="https://maps.google.com/maps?width=100%&amp;height=600&amp;hl=en&amp;q=%C4%B0zmir+(My%20Business%20Name)&amp;ie=UTF8&amp;t=&amp;z=14&amp;iwloc=B&amp;output=embed"
+                // style="filter: grayscale(1) contrast(1.2) opacity(0.4);"
+              ></iframe> */}
+
+              {/* <div> */}
+              <iframe
+                className="w-full h-full"
+                frameborder="0"
+                scrolling="no"
+                marginheight="0"
+                marginwidth="0"
+                src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=ST.%20Augustine%20Hospital%20Multispeciality%20Dental%20Care+(ST.%20Augustine%20Hospital%20Multispeciality%20Dental%20Care)&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"
+              ></iframe>
+              {/* </div> */}
             </Paper>
           </Grid>
         </Grid>

@@ -124,7 +124,7 @@ function VideoBanner() {
               >
                 {t("medical-landing.banner_subtitle")}
               </Typography>
-              <Paper className={classes.searchBanner}>
+              {/* <Paper className={classes.searchBanner}>
                 <TextField
                   variant="standard"
                   className={classes.search}
@@ -142,7 +142,7 @@ function VideoBanner() {
                     {isDesktop && t("medical-landing.banner_search")}
                   </Button>
                 </div>
-              </Paper>
+              </Paper> */}
             </div>
           </Grid>
           {isTablet && (
@@ -163,21 +163,26 @@ function VideoBanner() {
                         {playCtrl ? <PauseIcon /> : <PlayIcon />}
                       </IconButton>
                     )}
-                    {!play || isMobile ? (
+                    {/* {!play || isMobile ? (
                       <img src={imgApi.medical[0]} alt="cover" />
-                    ) : null}
+                    ) : null} */}
                     {yt.use && (
-                      <div className={classes.video}>
-                        {!isMobile && (
-                          <YouTube
-                            videoId="GWvqRcfkTGg"
-                            opts={opts}
-                            onReady={_onReady}
-                            onEnd={_onEnd}
-                            onPlay={_onPlay}
-                          />
-                        )}
-                      </div>
+                      // <div className={classes.video}>
+                      //   {!isMobile && (
+                      // <YouTube
+                      //   videoId="GWvqRcfkTGg"
+                      //   opts={opts}
+                      //   onReady={_onReady}
+                      //   onEnd={_onEnd}
+                      //   onPlay={_onPlay}
+                      // />
+                      <img
+                        className={classes.video}
+                        src={"/images/hero.jpg"}
+                        alt="cover"
+                      />
+                      //   )}
+                      // </div>
                     )}
                   </div>
                 </div>

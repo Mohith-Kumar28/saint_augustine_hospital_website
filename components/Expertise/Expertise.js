@@ -16,7 +16,9 @@ import TitleDeco from "../Title/WithDecoration";
 const expertiseList = [
   ["24*7 OT", "24*7 CT"],
   ["24*7 X-RAY", "24*7 EMERGENCY SERVICES"],
-  ["24*7 NICU", "24*7 SONOGRAPHY"],
+  ["24*7 NICU", "PICU"],
+  ["ICU", "ECHO CARDIOGRAPHY"],
+  ["24*7 SONOGRAPHY"],
 
   // ["Reumatologi", "Andrologi", "Ortodonsia"],
   // ["Dentist", "Padriatic", "Cardiology"],

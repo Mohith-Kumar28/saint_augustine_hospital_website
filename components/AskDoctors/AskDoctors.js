@@ -16,7 +16,7 @@ import useStyles from "./ask-doctors-style";
 
 const doctorsData = [
   {
-    avatar: imgAPI.doctors[1],
+    avatar: imgAPI.doctors[0],
     name: "DR. RAJIV  SAIKIA",
     title: "M.B.B.S, MD (Physician)",
     role: "Physician",
@@ -25,7 +25,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[2],
+    avatar: imgAPI.doctors[1],
     name: "DR. RAKTIM KR BORA",
     title: "M.B.B.S, DCH (Consultant Pediatrician)",
     role: "Consultant Pediatrician",
@@ -33,7 +33,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[3],
+    avatar: imgAPI.doctors[2],
     name: "DR. JAHIDUR RAHMAN",
     title: "M.B.B.S, Critical Care (Anesthetist)",
     role: "Anesthetist",
@@ -41,7 +41,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[4],
+    avatar: imgAPI.doctors[3],
     name: "DR. SHAH JAHAN ALI",
     title: "M.B.B.S, M.D (Gynecologist)",
     role: "Gynecologist",
@@ -50,7 +50,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[5],
+    avatar: imgAPI.doctors[4],
     name: "SUSANTA SINGHA",
     title: "M.B.B.S, N.B (Surgeon)",
     role: "Surgeon",
@@ -59,7 +59,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[6],
+    avatar: imgAPI.doctors[5],
     name: "DR. FIROZ IFTEKHAR AHMED",
     title: "M.B.B.S CMO, (EMERGENCY)",
     role: "EMERGENCY",
@@ -68,7 +68,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[7],
+    avatar: imgAPI.doctors[6],
     name: "DR. SODAGAR SINGHA",
     title: "M.B.B.S, M.S. (Orthopedics)",
     role: "Orthopedics",
@@ -77,7 +77,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[8],
+    avatar: imgAPI.doctors[7],
     name: "DR. RAJU BASUMATARY",
     title: "M.B.B.S, (D.C.P)",
     role: "D.C.P",
@@ -86,7 +86,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[9],
+    avatar: imgAPI.doctors[8],
     name: "DR. SUVRADWIP BISWAS",
     title: "M.B.B.S, M.S. (ENT, Head & Neck Surgery)",
     role: "ENT, Head & Neck Surgery",
@@ -95,7 +95,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[10],
+    avatar: imgAPI.doctors[9],
     name: "DR. ANJAN DAS",
     title: "M.B.B.S (EMERGENCY)",
     role: "EMERGENCY",
@@ -104,7 +104,25 @@ const doctorsData = [
     exp: 4,
   },
   {
+    avatar: imgAPI.doctors[10],
+    name: "⁠DR. ARUNAV BARMA",
+    title: "B.D.S.",
+    role: "B.D.S.",
+    about: "",
+    rating: "",
+    exp: 4,
+  },
+  {
     avatar: imgAPI.doctors[11],
+    name: "⁠DR. THANGSANG PUI",
+    title: "Designation: M.B.B.S (EMERGENCY)",
+    role: "EMERGENCY",
+    about: "",
+    rating: "",
+    exp: 4,
+  },
+  {
+    avatar: imgAPI.doctors[12],
     name: "UROLOGIST",
     title: "Visiting Doctor",
     role: "Visiting Doctor",
@@ -113,7 +131,7 @@ const doctorsData = [
     exp: 4,
   },
   {
-    avatar: imgAPI.doctors[12],
+    avatar: imgAPI.doctors[13],
     name: "CARDIOLOGIST",
     title: "Visiting Doctor",
     role: "Visiting Doctor",

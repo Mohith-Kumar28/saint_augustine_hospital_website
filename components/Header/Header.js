@@ -12,8 +12,8 @@ import Scrollspy from "react-scrollspy";
 import { useTranslation } from "next-i18next";
 import Settings from "./Settings";
 import MobileMenu from "./MobileMenu";
-// import logo from "~/public/images/medical-logo.svg";
-const logo = "";
+import logo from "~/public/images/medical-logo.png";
+// const logo = "";
 import brand from "~/public/text/brand";
 import routeLink from "~/public/text/link";
 import useStyles from "./header-style";
@@ -103,16 +103,16 @@ function Header(props) {
                   </span>
                 </IconButton>
               )}
-              <div className={classes.logo}>
+              <div className="w-72">
                 {invert ? (
                   <Link href={curLang + routeLink.medical.home}>
                     <img src={logo} alt="logo" />
-                    {brand.medical.name}
+                    {/* {brand.medical.name} */}
                   </Link>
                 ) : (
                   <AnchorLink href="#home">
                     <img src={logo} alt="logo" />
-                    {brand.medical.name}
+                    {/* {brand.medical.name} */}
                   </AnchorLink>
                 )}
               </div>

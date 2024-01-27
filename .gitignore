@@ -9,6 +9,9 @@
 # next.js
 /.next/
 
+/.package-lock.json
+/package-lock.json
+
 
 # production
 /build

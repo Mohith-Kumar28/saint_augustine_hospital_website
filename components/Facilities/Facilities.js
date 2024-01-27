@@ -14,11 +14,11 @@ import Card from "../Cards/Default";
 import DotsParallax from "../Parallax/Dots";
 
 const facilityList = [
-  {
-    title: "B.SC NURSING AND DMLT COURSES AVAILABLE",
-    desc: "Proin ac arcu nisl. Duis eu molestie lectus. Nam quis mauris faucibus, aliquet elit eu, rhoncus ipsum.",
-    img: imgApi.medical[3],
-  },
+  // {
+  //   title: "B.SC NURSING AND DMLT COURSES AVAILABLE",
+  //   desc: "Proin ac arcu nisl. Duis eu molestie lectus. Nam quis mauris faucibus, aliquet elit eu, rhoncus ipsum.",
+  //   img: imgApi.medical[3],
+  // },
   {
     title: "FIRE FIGHTING SYSTEM",
     desc: "Proin quis pellentesque dui. Ut sed leo neque. Nullam aliquet iaculis neque a commodo.",

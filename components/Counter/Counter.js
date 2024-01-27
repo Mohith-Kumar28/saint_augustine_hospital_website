@@ -15,7 +15,7 @@ function Counter() {
           <Grid sm={4} item>
             <div className={cx(classes.counterItem, classes.deco)}>
               <div className={classes.text}>
-                <Typography variant="h3">3</Typography>
+                <Typography variant="h3">+10</Typography>
                 <Typography component="p">
                   {t("medical-landing.about_clinics")}
                 </Typography>
@@ -25,7 +25,7 @@ function Counter() {
           <Grid sm={4} item>
             <div className={cx(classes.counterItem, classes.deco)}>
               <div className={classes.text}>
-                <Typography variant="h3">+5</Typography>
+                <Typography variant="h3">+12</Typography>
                 <Typography component="p">
                   {t("medical-landing.about_doctor")}
                 </Typography>
