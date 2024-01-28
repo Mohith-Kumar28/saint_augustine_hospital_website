@@ -82,18 +82,18 @@ function Contact() {
           </div>
         </div>
       )}
-      {!isTablet && (
-        <IconButton
-          href={curLang + routeLink.medical.home}
-          className={classes.backtohome}
-          size="large"
-        >
-          <span>
-            <i className="ion-ios-home-outline" />
-            <i className="ion-ios-arrow-round-back" />
-          </span>
-        </IconButton>
-      )}
+      {/* {!isTablet && ( */}
+      <IconButton
+        href={curLang + routeLink.medical.home}
+        className={classes.backtohome}
+        size="large"
+      >
+        <span>
+          <i className="ion-ios-home-outline" />
+          <i className="ion-ios-arrow-round-back" />
+        </span>
+      </IconButton>
+      {/* )} */}
       <Container maxWidth="md">
         <Typography variant="h3" gutterBottom className={text.title}>
           {t("contact_title")}
