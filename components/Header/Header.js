@@ -139,11 +139,11 @@ function Header(props) {
                       )}
                     </li>
                   ))}
-                  <li>
+                  {/* <li>
                     <Button href={curLang + routeLink.medical.contact}>
                       {t("medical-landing.header_contact")}
                     </Button>
-                  </li>
+                  </li> */}
                   {/* <li>
                     <Button href={curLang + routeLink.medical.doctors}>
                       Doctors

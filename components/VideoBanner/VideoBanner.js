@@ -103,7 +103,11 @@ function VideoBanner() {
     <div className={classes.heroContent}>
       {!isTablet && (
         <figure className={classes.mobileCover}>
-          <img src={imgApi.medical[0]} alt="cover" />
+          <img
+            src={"/images/hero.jpg"}
+            className="object-cover"
+            alt="contain"
+          />
         </figure>
       )}
       <Container fixed={isDesktop}>
