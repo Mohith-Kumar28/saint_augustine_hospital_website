@@ -80,6 +80,7 @@ function Landing(props) {
   return (
     <React.Fragment>
       <Head>
+        <link rel="icon" href="/favicon.ico" />
         <title>{brand.medical.name + " - Home Page"}</title>
       </Head>
       <CssBaseline />
