@@ -18,7 +18,7 @@ const SheetData = () => {
           complete: (result) => {
             const bannersWithImages = result.data.map((banner) => {
               try {
-                const imageData = banner.image; // Assuming the column is named "Image"
+                const imageData = banner?.image; // Assuming the column is named "Image"
                 const blob = base64StringToBlob(imageData);
                 const imageUrl = URL.createObjectURL(blob);
                 return {
@@ -47,19 +47,19 @@ const SheetData = () => {
 
   return (
     <>
-      {banners && banners.length !== 0 && (
+      {banners && banners?.length !== 0 && (
         <div className="flex flex-col my-20">
-          {banners.map((banner, index) => (
+          {banners?.map((banner, index) => (
             <div
               key={index}
               className="flex border border-orange-400 bg-orange-50 rounded-lg p-4 m-4"
             >
-              {/* <img src={banner.image} alt="Image" className="w-full h-auto" /> */}
+              {/* <img src={banner?.image} alt="Image" className="w-full h-auto" /> */}
               <div className="">
                 <h2 className="font-extrabold text-xl">
-                  {banner.heading && banner.heading}
+                  {banner?.heading && banner?.heading}
                 </h2>
-                <p className=" font-bold text-base">{banner.content}</p>{" "}
+                <p className=" font-bold text-base">{banner?.content}</p>{" "}
               </div>
               {/* Assuming the content is stored in a column named "Content" */}
             </div>
