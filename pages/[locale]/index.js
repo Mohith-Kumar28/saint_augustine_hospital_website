@@ -23,6 +23,7 @@ import OvalTop from "~/components/Parallax/OvalTop";
 import Footer from "~/components/Footer";
 import PageNav from "~/components/PageNav";
 import Notification from "~/components/Notification";
+import BannerBig from "../../components/Banner/BannerBig";
 
 const sectionMargin = (margin) => margin * 20;
 const useStyles = makeStyles({ uniqId: "home" })((theme) => ({
@@ -90,6 +91,7 @@ function Landing(props) {
           <section id="home">
             <VideoBanner />
           </section>
+          <BannerBig />
           <OvalTop />
           <section className={classes.spaceTopShort} id="about">
             <About />

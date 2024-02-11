@@ -153,6 +153,13 @@ function VideoBanner() {
             <Grid item md={6} className={classes.visualContent}>
               <div className={classes.decoBanner}>
                 <div className={classes.menuBg} />
+                <figure className={classes.mobileCover}>
+                  <img
+                    src={"/images/hero.jpg"}
+                    className="object-cover md:hidden"
+                    alt="contain"
+                  />
+                </figure>
                 <div className={classes.videoBg} />
               </div>
               <div className={classes.videoWrap}>
@@ -180,11 +187,13 @@ function VideoBanner() {
                       //   onEnd={_onEnd}
                       //   onPlay={_onPlay}
                       // />
-                      <img
-                        className={classes.video}
-                        src={"/images/hero.jpg"}
-                        alt="cover"
-                      />
+                      <>
+                        <img
+                          className={classes.video}
+                          src={"/images/hero.jpg"}
+                          alt="cover"
+                        />
+                      </>
                       //   )}
                       // </div>
                     )}

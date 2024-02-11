@@ -178,7 +178,10 @@ function Footer(props) {
             <IconButton aria-label="TW" className={classes.margin} size="small">
               <i className="ion-logo-facebook" />
             </IconButton> */}
-            <Link href="" target="_blank">
+            <Link
+              href="https://www.instagram.com/augustinehospital?igsh=OGQ5ZDc2ODk2ZA=="
+              target="_blank"
+            >
               <IconButton
                 aria-label="IG"
                 className={classes.margin}
@@ -187,13 +190,28 @@ function Footer(props) {
                 <i className="ion-logo-instagram" />
               </IconButton>
             </Link>{" "}
-            <Link href="" target="_blank">
+            <Link
+              href="https://www.youtube.com/@AUGUSTINEHOSPITAL"
+              target="_blank"
+            >
               <IconButton
                 aria-label="YT"
                 className={classes.margin}
                 size="small"
               >
                 <i className="ion-logo-youtube" />
+              </IconButton>
+            </Link>
+            <Link
+              href="https://www.facebook.com/profile.php?id=61554096734016&mibextid=ZbWKwL"
+              target="_blank"
+            >
+              <IconButton
+                aria-label="FB"
+                className={classes.margin}
+                size="small"
+              >
+                <i className="ion-logo-facebook" />
               </IconButton>
             </Link>
             {/* <IconButton aria-label="LI" className={classes.margin} size="small">
