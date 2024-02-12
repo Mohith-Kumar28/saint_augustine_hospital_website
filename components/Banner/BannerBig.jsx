@@ -13,10 +13,12 @@ const SheetData = () => {
       try {
         const response = await fetch(csvUrl);
         const text = await response.text();
+        console.log("CSV Text:", text); // Log the fetched CSV text
         Papa.parse(text, {
           header: true,
           dynamicTyping: true,
           complete: (result) => {
+            console.log("Parsed Result:", result); // Log the parsed CSV result
             const bannersWithImages = result.data.map((banner) => {
               try {
                 const imageData = banner.image; // Assuming the column is named "Image"
@@ -31,6 +33,7 @@ const SheetData = () => {
                 return banner;
               }
             });
+            console.log("Banners with Images:", bannersWithImages); // Log the banners with images
             setBanners(bannersWithImages);
           },
           error: (error) => {
