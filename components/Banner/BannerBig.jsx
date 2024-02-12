@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
-import { base64StringToBlob } from "blob-util"; // You may need to install this library if you haven't already
+import { base64StringToBlob } from "blob-util";
 
 const SheetData = () => {
-  const [banners, setbanners] = useState([]);
+  const [banners, setBanners] = useState([]);
+  const [showModal, setShowModal] = useState(true);
 
   useEffect(() => {
     const asyncFetch = async () => {
@@ -18,7 +19,7 @@ const SheetData = () => {
           complete: (result) => {
             const bannersWithImages = result.data.map((banner) => {
               try {
-                const imageData = banner?.image; // Assuming the column is named "Image"
+                const imageData = banner.image; // Assuming the column is named "Image"
                 const blob = base64StringToBlob(imageData);
                 const imageUrl = URL.createObjectURL(blob);
                 return {
@@ -27,11 +28,10 @@ const SheetData = () => {
                 };
               } catch (error) {
                 console.error("Error processing image data:", error);
-                return banner; // Return the original banner object if an error occurs
+                return banner;
               }
             });
-            console.log("Banners with images:", bannersWithImages);
-            setbanners(bannersWithImages);
+            setBanners(bannersWithImages);
           },
           error: (error) => {
             console.error("Error parsing CSV:", error);
@@ -45,25 +45,40 @@ const SheetData = () => {
     asyncFetch();
   }, []);
 
+  // Close the modal
+  const closeModal = () => {
+    setShowModal(false);
+  };
+
   return (
     <>
-      {banners && banners?.length !== 0 && (
-        <div className="flex flex-col my-20">
-          {banners?.map((banner, index) => (
-            <div
-              key={index}
-              className="flex border border-orange-400 bg-orange-50 rounded-lg p-4 m-4"
-            >
-              {/* <img src={banner?.image} alt="Image" className="w-full h-auto" /> */}
-              <div className="">
-                <h2 className="font-extrabold text-xl">
-                  {banner?.heading && banner?.heading}
-                </h2>
-                <p className=" font-bold text-base">{banner?.content}</p>{" "}
-              </div>
-              {/* Assuming the content is stored in a column named "Content" */}
+      {banners && banners?.length > 0 && showModal && (
+        <div className="fixed z-50 inset-0 px-8 flex items-center justify-center bg-black bg-opacity-50">
+          <div className="bg-white p-8 rounded-lg">
+            <div className="flex flex-col gap-6">
+              {banners?.map((banner, index) => (
+                <div
+                  key={index}
+                  className="flex border border-orange-400 bg-orange-50 rounded-lg p-4 "
+                >
+                  {/* <img src={banner?.image} alt="Image" className="w-full h-auto" /> */}
+                  <div className="">
+                    <h2 className="font-extrabold text-xl">
+                      {banner?.heading && banner?.heading}
+                    </h2>
+                    <p className=" font-bold text-base">{banner?.content}</p>{" "}
+                  </div>
+                  {/* Assuming the content is stored in a column named "Content" */}
+                </div>
+              ))}
             </div>
-          ))}
+            <button
+              onClick={closeModal}
+              className="mt-4 bg-[#CCECEF] rounded-full  text-gray-700 font-bold mt-8 py-2 px-5"
+            >
+              Close
+            </button>
+          </div>
         </div>
       )}
     </>
