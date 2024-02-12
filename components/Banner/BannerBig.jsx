@@ -74,7 +74,7 @@ const SheetData = () => {
             </div>
             <button
               onClick={closeModal}
-              className="mt-4 bg-[#CCECEF] rounded-full  text-gray-700 font-bold mt-8 py-2 px-5"
+              className=" bg-[#CCECEF] rounded-full  text-gray-700 font-bold mt-8 py-2 px-5"
             >
               Close
             </button>
