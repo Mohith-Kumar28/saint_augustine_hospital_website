@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import Papa from "papaparse";
 import { base64StringToBlob } from "blob-util";
+import { FiXCircle } from "react-icons/fi";
 
 const SheetData = () => {
   const [banners, setBanners] = useState([]);
@@ -56,13 +57,13 @@ const SheetData = () => {
   return (
     <>
       {banners && banners?.length > 0 && showModal && (
-        <div className="fixed z-50 inset-0 px-8 flex items-center justify-center bg-black bg-opacity-50">
-          <div className="bg-white p-8 rounded-lg">
+        <div className="fixed z-50 w-1/2  bottom-10 left-0  flex items-center justify-center bg-opacity-50">
+          <div className="bg-yellow-100 p-2 rounded-lg max-w-4xl">
             <div className="flex flex-col gap-6">
               {banners?.map((banner, index) => (
                 <div
                   key={index}
-                  className="flex border border-orange-400 bg-orange-50 rounded-lg p-4 "
+                  className="flex border border-yellow-400 bg-orange-50 rounded-lg p-4 "
                 >
                   {/* <img src={banner?.image} alt="Image" className="w-full h-auto" /> */}
                   <div className="">
@@ -77,9 +78,9 @@ const SheetData = () => {
             </div>
             <button
               onClick={closeModal}
-              className=" bg-[#CCECEF] rounded-full  text-gray-700 font-bold mt-8 py-2 px-5"
+              className=" bg-red-100 hover:bg-[#CCECEF]/70 absolute shadow-md top-4 right-4 rounded-full  text-red-600 font-bold p-1"
             >
-              Close
+              <FiXCircle className="text-3xl" />
             </button>
           </div>
         </div>

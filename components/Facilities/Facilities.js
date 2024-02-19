@@ -20,33 +20,48 @@ const facilityList = [
   //   img: imgApi.medical[3],
   // },
   {
+    title: "Pharmacy",
+    desc: "he hospital has got 24*7 Pharmacy with medicines and medical apparatus of trusted companies and skilled pharamacist.",
+    img: imgApi.medical[6],
+  },
+  {
+    title: "Canteen",
+    desc: "There is a Canteen within the hospital providing home like food and other daily used items. It prepares food for the patient according to the specially prescribed by the doctors.",
+    img: imgApi.medical[6],
+  },
+  {
+    title: "Parking",
+    desc: "The hospital has got good parking facility with guidance of security staff",
+    img: imgApi.medical[6],
+  },
+  {
     title: "FIRE FIGHTING SYSTEM",
-    desc: "Proin quis pellentesque dui. Ut sed leo neque. Nullam aliquet iaculis neque a commodo.",
+    desc: "The hospital has got well equipped fire fighting system  and advanced machines which may be a live saver during emergency.",
     img: imgApi.medical[6],
   },
   {
     title: "PROFICIENT NURSE",
-    desc: "Quisque consectetur lectus vel orci porttitor gravida ac eu erat. Nullam accumsan nibh tortor.",
+    desc: "The hospital has got Nursing, technical, laboratory staff  with various fields such as B.Sc Nursing, ANM, GNM, DMLT etc with a good experience and fantastic skill.",
     img: imgApi.medical[5],
   },
   {
     title: "TRAINED SECURITY",
-    desc: "Proin ac arcu nisl. Duis eu molestie lectus. Nam quis mauris faucibus, aliquet elit eu, rhoncus ipsum.",
+    desc: "The hospital has got two different types of security from agency and of it's own.",
     img: imgApi.medical[4],
   },
   {
     title: "DENTAL FACILITY",
-    desc: "Proin quis pellentesque dui. Ut sed leo neque. Nullam aliquet iaculis neque a commodo.",
+    desc: "The hospital is specialised in dental facility with specialised machinery, experienced Dentist, supporting staff etc.",
     img: imgApi.medical[3],
   },
   {
     title: "CCTV SURVEILLENCE",
-    desc: "Quisque consectetur lectus vel orci porttitor gravida ac eu erat. Nullam accumsan nibh tortor.",
+    desc: "The hospital has 24*7 CCTV surveillance with high definition recording & clear night vision present everywhere in the hospital",
     img: imgApi.medical[2],
   },
   {
     title: "PHYSIOTHERAPY",
-    desc: "Quisque consectetur lectus vel orci porttitor gravida ac eu erat. Nullam accumsan nibh tortor.",
+    desc: "The hospital have got a Physiotherapy department with various specialised equipments.",
     img: imgApi.medical[2],
   },
 ];

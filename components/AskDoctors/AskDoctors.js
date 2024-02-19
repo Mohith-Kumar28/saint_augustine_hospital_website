@@ -20,7 +20,8 @@ const doctorsData = [
     name: "DR. RAJIV  SAIKIA",
     title: "M.B.B.S, MD (Physician)",
     role: "Physician",
-    about: "",
+    about:
+      "MBBS, MD (Internal Medicine), More than 16 yrs experience as Medicine Specialist, different parts & position.",
     rating: "OPD No. 03",
     exp: 4,
   },
@@ -45,7 +46,8 @@ const doctorsData = [
     name: "DR. SHAH JAHAN ALI",
     title: "M.B.B.S, M.D (Gynecologist)",
     role: "Gynecologist",
-    about: "",
+    about:
+      "I have passed out from Guwahati Medical College both MBBS and MD in obstetrics and gynaecology. I am working in the field of obstetrics and gynaecology since 2009 . Presently I am working in st Agustine hospital.My field of interest is in high risk pregnancy.",
     rating: "OPD No. 05",
     exp: 4,
   },
@@ -179,6 +181,7 @@ function AskDoctors() {
       key={index.toString()}
       name={item.name}
       title={item.title}
+      about={item.about}
       avatar={item.avatar}
       rating={item.rating}
       exp={item.exp}
