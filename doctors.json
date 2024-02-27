@@ -1,0 +1,126 @@
+[
+  {
+    "avatar": "imgAPI.doctors[0]",
+    "name": "DR. RAJIV  SAIKIA",
+    "title": "M.B.B.S, MD (Physician)",
+    "role": "Physician",
+    "about": "MBBS, MD (Internal Medicine), More than 16 yrs experience as Medicine Specialist, different parts & position.",
+    "rating": "OPD No. 03",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[1]",
+    "name": "DR. RAKTIM KR BORA",
+    "title": "M.B.B.S, DCH (Consultant Pediatrician)",
+    "role": "Consultant Pediatrician",
+    "rating": "OPD No. 02",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[2]",
+    "name": "DR. JAHIDUR RAHMAN",
+    "title": "M.B.B.S, Critical Care (Anesthetist)",
+    "role": "Anesthetist",
+    "rating": "OPD No. 01",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[3]",
+    "name": "DR. SHAH JAHAN ALI",
+    "title": "M.B.B.S, M.D (Gynecologist)",
+    "role": "Gynecologist",
+    "about": "I have passed out from Guwahati Medical College both MBBS and MD in obstetrics and gynaecology. I am working in the field of obstetrics and gynaecology since 2009 . Presently I am working in st Agustine hospital.My field of interest is in high risk pregnancy.",
+    "rating": "OPD No. 05",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[4]",
+    "name": "SUSANTA SINGHA",
+    "title": "M.B.B.S, N.B (Surgeon)",
+    "role": "Surgeon",
+    "about": "",
+    "rating": "OPD No. 04",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[5]",
+    "name": "DR. FIROZ IFTEKHAR AHMED",
+    "title": "M.B.B.S CMO, (EMERGENCY)",
+    "role": "EMERGENCY",
+    "about": "",
+    "rating": "",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[6]",
+    "name": "DR. SODAGAR SINGHA",
+    "title": "M.B.B.S, M.S. (Orthopedics)",
+    "role": "Orthopedics",
+    "about": "",
+    "rating": "OPD No. 06",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[7]",
+    "name": "DR. RAJU BASUMATARY",
+    "title": "M.B.B.S, (D.C.P)",
+    "role": "D.C.P",
+    "about": "",
+    "rating": "",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[8]",
+    "name": "DR. SUVRADWIP BISWAS",
+    "title": "M.B.B.S, M.S. (ENT, Head & Neck Surgery)",
+    "role": "ENT, Head & Neck Surgery",
+    "about": "",
+    "rating": "OPD No. 07",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[9]",
+    "name": "DR. ANJAN DAS",
+    "title": "M.B.B.S (EMERGENCY)",
+    "role": "EMERGENCY",
+    "about": "",
+    "rating": "",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[10]",
+    "name": "⁠DR. ARUNAV BARMA",
+    "title": "B.D.S.",
+    "role": "B.D.S.",
+    "about": "",
+    "rating": "",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[11]",
+    "name": "⁠DR. THANGSANG PUI",
+    "title": "Designation: M.B.B.S (EMERGENCY)",
+    "role": "EMERGENCY",
+    "about": "",
+    "rating": "",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[12]",
+    "name": "UROLOGIST",
+    "title": "Visiting Doctor",
+    "role": "Visiting Doctor",
+    "about": "",
+    "rating": "",
+    "exp": 4
+  },
+  {
+    "avatar": "imgAPI.doctors[13]",
+    "name": "CARDIOLOGIST",
+    "title": "Visiting Doctor",
+    "role": "Visiting Doctor",
+    "about": "",
+    "rating": "",
+    "exp": 4
+  }
+]
