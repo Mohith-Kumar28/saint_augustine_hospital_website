@@ -63,10 +63,6 @@ function AskDoctors() {
     asyncFetch();
   }, []);
 
-  function handleListItemClick(event, role) {
-    setSelectedIndex(role);
-  }
-
   // Extract unique roles from doctorsData
   const uniqueRoles = [
     "All",
