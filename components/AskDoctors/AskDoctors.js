@@ -22,14 +22,15 @@ function AskDoctors() {
   const { classes, cx } = useStyles();
   const { classes: title } = useTitle();
   const [selectedIndex, setSelectedIndex] = useState("All");
+  const [doctorsData, setDoctorsData] = useState([]);
   const [filteredDoctors, setFilteredDoctors] = useState([]);
   function handleListItemClick(event, role) {
     // If "All" is selected, show all doctors
     if (role === "All") {
-      setFilteredDoctors(filteredDoctors);
+      setFilteredDoctors(doctorsData);
     } else {
       // Filter the doctors based on the selected role
-      const filtered = filteredDoctors.filter((doctor) => doctor.role === role);
+      const filtered = doctorsData.filter((doctor) => doctor.role === role);
       setFilteredDoctors(filtered);
       console.log(filtered);
     }
@@ -48,7 +49,7 @@ function AskDoctors() {
           header: true,
           dynamicTyping: true,
           complete: (result) => {
-            setFilteredDoctors(result.data);
+            setDoctorsData(result.data);
             console.log("doctors", result.data);
           },
           error: (error) => {
@@ -66,7 +67,7 @@ function AskDoctors() {
   // Extract unique roles from doctorsData
   const uniqueRoles = [
     "All",
-    ...Array.from(new Set(filteredDoctors.map((doctor) => doctor.role))),
+    ...Array.from(new Set(doctorsData.map((doctor) => doctor.role))),
   ];
 
   const renderCard = (item, index) => (
