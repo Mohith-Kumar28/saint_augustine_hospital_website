@@ -23,6 +23,19 @@ function AskDoctors() {
   const { classes: title } = useTitle();
   const [selectedIndex, setSelectedIndex] = useState("All");
   const [filteredDoctors, setFilteredDoctors] = useState([]);
+  function handleListItemClick(event, role) {
+    // If "All" is selected, show all doctors
+    if (role === "All") {
+      setFilteredDoctors(filteredDoctors);
+    } else {
+      // Filter the doctors based on the selected role
+      const filtered = filteredDoctors.filter((doctor) => doctor.role === role);
+      setFilteredDoctors(filtered);
+      console.log(filtered);
+    }
+
+    setSelectedIndex(role);
+  }
 
   useEffect(() => {
     const asyncFetch = async () => {
@@ -53,6 +66,12 @@ function AskDoctors() {
   function handleListItemClick(event, role) {
     setSelectedIndex(role);
   }
+
+  // Extract unique roles from doctorsData
+  const uniqueRoles = [
+    "All",
+    ...Array.from(new Set(filteredDoctors.map((doctor) => doctor.role))),
+  ];
 
   const renderCard = (item, index) => (
     <ProfileCard
@@ -85,7 +104,7 @@ function AskDoctors() {
                   {t("medical-landing.ask_doctors")}
                 </Typography>
                 <List component="nav">
-                  <ListItem
+                  {/* <ListItem
                     button
                     className={cx(
                       classes.filter,
@@ -94,7 +113,20 @@ function AskDoctors() {
                     onClick={(event) => handleListItemClick(event, "All")}
                   >
                     <ListItemText primary={"All "} />
-                  </ListItem>
+                  </ListItem> */}
+                  {uniqueRoles.map((role, index) => (
+                    <ListItem
+                      button
+                      key={index.toString()}
+                      className={cx(
+                        classes.filter,
+                        selectedIndex === role && classes.active
+                      )}
+                      onClick={(event) => handleListItemClick(event, role)}
+                    >
+                      <ListItemText primary={role} />
+                    </ListItem>
+                  ))}
                 </List>
               </div>
             </ScrollAnimation>
