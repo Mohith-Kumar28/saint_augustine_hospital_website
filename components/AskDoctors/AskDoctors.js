@@ -50,6 +50,7 @@ function AskDoctors() {
           dynamicTyping: true,
           complete: (result) => {
             setDoctorsData(result.data);
+            setFilteredDoctors(result.data);
             console.log("doctors", result.data);
           },
           error: (error) => {
