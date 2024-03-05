@@ -13,11 +13,12 @@ function Services(props) {
       <figure>
         <img src={img} alt="img" />
       </figure>
-      <div className={classes.text}>
+      <div className="p-3">
         <Typography display="block" variant="h6">
           {title}
         </Typography>
-        <Typography component="p">{desc}</Typography>
+        {/* <Typography>{desc}</Typography> */}
+        <p>{desc}</p>
       </div>
       {/* <Button variant="contained" color="secondary" className={classes.button}>
         {button}
