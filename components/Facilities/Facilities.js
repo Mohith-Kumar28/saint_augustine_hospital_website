@@ -54,7 +54,7 @@ function Facilities() {
   useEffect(() => {
     const asyncFetch = async () => {
       const csvUrl =
-        "https://docs.google.com/spreadsheets/d/e/2PACX-1vRuv0meN32gExglqFtY_Sob3NEgqIw-uuORdLuxbCWiBt-BpIRSrb8h4Y5yb4IDZaYJjnNnA7L-_R_R/pub?output=csv";
+        "https://docs.google.com/spreadsheets/d/e/2PACX-1vS1_ZgoJoMGYbnZXm61sCxqu1ZaJYONKKSieXDfpo_hc-Q3k4AqhSrV00GZRngQ2MMeokgwWNL2dx_q/pub?output=csv";
       try {
         const response = await fetch(csvUrl);
         const text = await response.text();
