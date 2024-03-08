@@ -32,7 +32,7 @@ function About() {
           <Grid item md={5} xs={12}>
             <div className={align.textCenter}>
               <TitleDeco
-                bg={imgAPI.medical[1]}
+                // bg={imgAPI.medical[1]}
                 text={t("medical-landing.about_title")}
               />
             </div>

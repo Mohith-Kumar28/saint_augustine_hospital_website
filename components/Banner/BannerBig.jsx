@@ -58,7 +58,7 @@ const SheetData = () => {
     <>
       {banners && banners?.length > 0 && showModal && (
         <div className="fixed z-50 md:w-1/2  bottom-10 left-0  flex items-center justify-center bg-opacity-50">
-          <div className="bg-yellow-100 p-2 rounded-lg max-w-4xl">
+          <div className="bg-yellow-100 w-full p-2 rounded-lg max-w-4xl">
             <div className="flex flex-col gap-6">
               {banners?.map((banner, index) => (
                 <div
