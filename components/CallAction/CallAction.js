@@ -54,7 +54,7 @@ function CallAction() {
                   size="large"
                   variant="contained"
                   color="primary"
-                  href={`https://wa.me/6002348850`}
+                  href={`https://wa.me/+916002348850`}
                   className={classes.button}
                 >
                   {t("medical-landing.cta_btn")}
