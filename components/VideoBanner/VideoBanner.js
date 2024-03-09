@@ -189,7 +189,7 @@ function VideoBanner() {
                       // />
                       <>
                         <img
-                          className={classes.video}
+                          className={""}
                           src={"/images/hero.jpeg"}
                           alt="cover"
                         />
