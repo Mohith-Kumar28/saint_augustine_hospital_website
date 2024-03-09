@@ -104,7 +104,7 @@ function VideoBanner() {
       {!isTablet && (
         <figure className={classes.mobileCover}>
           <img
-            src={"/images/hero.jpg"}
+            src={"/images/hero.jpeg"}
             className="object-cover"
             alt="contain"
           />
@@ -155,7 +155,7 @@ function VideoBanner() {
                 <div className={classes.menuBg} />
                 <figure className={classes.mobileCover}>
                   <img
-                    src={"/images/hero.jpg"}
+                    src={"/images/hero.jpeg"}
                     className="object-cover md:hidden"
                     alt="contain"
                   />
@@ -190,7 +190,7 @@ function VideoBanner() {
                       <>
                         <img
                           className={classes.video}
-                          src={"/images/hero.jpg"}
+                          src={"/images/hero.jpeg"}
                           alt="cover"
                         />
                       </>
